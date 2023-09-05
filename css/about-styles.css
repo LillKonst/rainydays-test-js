@@ -1,0 +1,61 @@
+/* About Page */
+
+
+main {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.about-pic {
+    max-width: 570px;
+    max-height: 853px;;
+    float: left;
+    padding: 20px; 
+
+}
+
+.a-d-text {
+    
+    padding: 20px;
+
+}
+
+.a-text {
+    font-size: 1.5em;
+    font-weight: 400;
+    padding: 0px 0px 10px 0px;
+    margin: 0%; 
+
+}
+
+.a-h1 {
+    font-size: 2.5em;
+    font-weight: 500;
+    padding: 0px 0px 20px 0px;
+    margin: 0%;
+}
+.display-block {
+    display: block;
+}
+
+
+@media (max-width:600px) {
+    main {
+        display:grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto 1fr;
+        gap: 10px; 
+    }
+
+    .about-pic {
+        grid-column: 1;
+        grid-row: 1;
+        max-width: 700px;
+        padding: 20px;
+    
+    
+    }
+}

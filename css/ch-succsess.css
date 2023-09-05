@@ -1,0 +1,92 @@
+* {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Akshar";
+    src: url("/fonts/Akshar-VariableFont_wght.ttf")
+}
+html body {
+    background-color: #F9F8F8;
+    font-family: "Akshar";
+}
+
+main {
+    padding: 5% 20%;
+}
+
+.relative {
+    position: relative;
+}
+
+.flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.checkout-img {
+    max-width: 600px; 
+}
+
+
+.exit {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    max-width: 30px; 
+}
+
+h1 {
+    font-size: 4em; 
+    font-weight: 600;
+    margin-bottom: 0px; 
+}
+
+h2 {
+    font-size: 3em; 
+    font-weight: 400;
+    padding: 0px; 
+    margin: 0px; 
+}
+
+p {
+    font-size: 1.6em; 
+    font-weight: 700;
+}
+
+@media (max-width: 800px) {
+    main {
+    padding: 5% 10%;
+    }
+
+    h1 {
+        font-size: 3em; 
+        font-weight: 600;
+        margin-bottom: 0px; 
+    }
+    
+    h2 {
+        font-size: 2em; 
+        font-weight: 400;
+        padding: 0px; 
+        margin: 0px; 
+    }
+    
+    p {
+        font-size: 1em; 
+        font-weight: 700;
+    }
+
+    .checkout-img {
+        max-width: 600px; 
+    }
+}
+
+@media (max-width: 450px) {
+    .checkout-img {
+        max-width: 300px; 
+    }
+}
+}

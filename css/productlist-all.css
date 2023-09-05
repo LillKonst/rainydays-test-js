@@ -1,0 +1,147 @@
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+.top-guide {
+    background-color: #7A9B76;
+    color:#000000;
+    padding: 1px 5px;
+    max-width: 400px;
+    max-height: 50px;
+    font-size: 1.5em; 
+}
+
+.product-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#jackets-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+
+.jacketDiv {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto autp;
+    gap: 10px;
+    width: 30%; 
+    
+}
+
+.s-product-img {
+    width:100%;
+}
+
+/* within product grid */
+
+.grid-pr-1 {
+    grid-column: 1 / 3;
+    grid-row: 1; 
+}
+.grid-pr-2 {
+    grid-column: 1;
+    grid-row: 2;
+    gap: 20px; 
+    padding-right: 30px;
+}
+.grid-pr-3 {
+    grid-column: 2;
+    grid-row: 2;
+}
+.product-text1 {
+    font-size: 1.5em;
+    font-weight: 500; 
+}
+.product-text2 {
+    font-size: 1.5em;
+}
+.product-text3 {
+    font-weight: 500; 
+}
+
+a {
+    text-decoration: none;
+    color:#000000;
+}
+
+
+/* within product grid big */
+.product-info-container-big {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    gap: 10px; 
+}
+.color-options-big {
+    max-width: 150px; 
+    padding: 20px; 
+}
+.grid-pr-1-big {
+    grid-column: 1 / 3;
+    grid-row: 1;
+}
+.grid-pr-2-big {
+    grid-column: 1;
+    grid-row: 2;
+}
+.grid-pr-3-big {
+    grid-column: 2;
+    grid-row: 2;
+}
+.product-text1-big {
+    font-size: 2.5em;
+    font-weight: 500; 
+    padding:0%; 
+    margin: 0%;
+}
+.product-text2-big {
+    font-size: 1.5em;
+}
+.product-text3-big {
+    font-weight: 500; 
+}
+
+@media (max-width:800px) {
+
+    .mobile-display-none {
+        display: none;
+    } 
+
+    main {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        flex: 2;
+        justify-content: center;
+        
+    }
+
+
+    .grid3, .grid4, .grid6, .grid7, .grid8, .grid9, .grid10, .grid11, .grid12, .grid13, .grid14, .grid15, .grid17, .grid18, .grid19, .grid20 {
+        flex: 1;
+        min-width: 150px; 
+        max-width: 200px; 
+    }
+    
+    .grid5, .grid16 {
+        display: none; 
+    }
+
+    
+    .grid21 { 
+        margin: 20px;
+    }
+
+}
+
+@media (max-width: 450px) {
+    .top-guide {
+        max-width: 340px;
+    }
+}
