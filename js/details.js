@@ -5,7 +5,7 @@ function getJacketIdFromQuery() {
 
 async function fetchJacketDetail() {
     const jacketId = getJacketIdFromQuery();
-    if (jacketId) {
+    if (!jacketId) {
         return;
     }
 
@@ -18,7 +18,7 @@ const jacketDetailContainer = document.getElementById("jacket-details");
 
 
 jacketDetailContainer.innerHTML = ""; 
-jacketDetailContainer.innerHTML += `<a href="/jacket-details.html?id=${jacketId}">`;
+jacketDetailContainer.innerHTML += `<h1>${jacketDetail.title}</h1>`;
 
 }
 
