@@ -22,7 +22,7 @@ async function displayJackets() {
             const jacketDiv = document.createElement("a");
             jacketDiv.classList.add("jacketDiv");
             jacketDiv.addEventListener("click", () => {
-            window.location.href = `products/jacket-details.html?id=${jacket.id}`;
+            window.location.href = `products/jacket-details.html?id=${jacket.id}&title=${jacket.title}`;
             });
         
             const image = document.createElement("img");

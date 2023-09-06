@@ -3,6 +3,11 @@ function getJacketIdFromQuery() {
     return urlParams.get("id");
 }
 
+function getJacketTitleFromQuery() {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get("title");
+}
+
 // fix this function
 function sizeSelection(parameter) {
     select = document.getElementById("size-container").value = parameter;
@@ -19,9 +24,13 @@ async function fetchJacketDetail() {
 const response = await fetch(`https://api.noroff.dev/api/v1/rainy-days/${jacketId}`);
 const jacketDetail = await response.json();
 
-
+const title = getJacketTitleFromQuery();
+const titleContainer = document.getElementById("title");
 
 const jacketDetailContainer = document.getElementById("jacket-details");
+
+titleContainer = document.getElementById("title");
+titleContainer.textContent = title;
 
 // fix the size buttons
 jacketDetailContainer.innerHTML = ""; 
