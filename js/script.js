@@ -3,6 +3,7 @@ const rainyDaysAPI = "https://api.noroff.dev/api/v1/rainy-days/";
 const getJacketText = document.querySelectorAll(".jacketText");
 
 async function getJackets() {
+    showLoadingIndicator();
     const response = await fetch(rainyDaysAPI); 
     const results = await response.json();
     return results;
@@ -44,6 +45,11 @@ async function displayJackets() {
             jacketDiv.appendChild(jacketPrice);          
             }
         }
+    }
+
+    function showLoadingIndicator() {
+        const itemList = document.getElementById("jackets-container");
+        itemList.innerHTML = "<li>Loading...</li>";
     }
 
     displayJackets();
