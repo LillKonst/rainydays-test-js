@@ -7,7 +7,7 @@ function getJacketTitleFromQuery() {
     const urlParams = new URLSearchParams(window.location.search);
     return urlParams.get("title");
 }
-  
+
 async function fetchJacketDetail() {
     const jacketId = getJacketIdFromQuery();
     const title = getJacketTitleFromQuery();
@@ -26,7 +26,6 @@ const jacketDetailContainer = document.getElementById("jacket-details");
 
 titleContainer.textContent = title;
 
-
 jacketDetailContainer.innerHTML = ""; 
 jacketDetailContainer.innerHTML += `<div class="grid-for-product-info">
 <img src="${jacketDetail.image}" class="product-pic" alt="${jacketDetail.description}">
@@ -44,9 +43,9 @@ jacketDetailContainer.innerHTML += `<div class="grid-for-product-info">
     `).join("")} 
 </fieldset>
 
-<button id="addToBag" type="add-to-bag" class ="add-to-button">ADD TO BAG</button>
-
 </form>
+
+<a href="/shoppingbag.html" id="addToBag">ADD TO BAG</a>
 </div>`;
 }
 

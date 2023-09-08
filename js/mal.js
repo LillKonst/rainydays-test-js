@@ -113,6 +113,45 @@ document
 
 
 
+}
+
+function addToBag(jacketDetail) {
+    let Item = {
+        id: jacketDetail.id,
+        name: jacketDetail.title,
+        price: jacketDetail.price,
+        image: jacketDetail.image,
+        quantity: 1,
+    };
+
+    let bag = JSON.parse(localStorage.getItem("bag")) || [];
+
+    let existingItem = bag.find((item) => item.id === jacketDetail.id);
+
+    if (existingItem) {
+        existingItem.quantity += 1;
+    } else {
+        let bagItem = {
+            id: jacketDetail.id,
+            name: jacketDetail.title,
+            price: jacketDetail.price,
+            image: jacketDetail.image, 
+            quantity: 1, 
+        };
+        bag.push(bagItem);
+    }
+
+    localStorage.setItem("bag", JSON.stringify(bag));
+
+}
+
+
+document
+      .getElementById("addToShoppingbag")
+      .addEventListener("click", () => addToBag (jacketDetail));
+
+
+
 
 
 

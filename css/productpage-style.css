@@ -150,43 +150,18 @@ input:checked + label {
     margin: 40px; 
 }
 
-.add-to-button {
+#addToBag {
     background-color: #CE8147;
     font-size: 2em; 
     font-weight: 600;
     margin: 30px; 
     padding: 5px; 
+    padding-left: 70px;
     border: none;
     border-radius: 15px; 
     max-width: 300px;
 
 }
-
-.color-btns {
-    display: flex; 
-    width: 40px;
-    height: 40px;
-    border: none; 
-    margin: 0px;
-    font-size: 1em;
-    padding-top: 15%;
-}
-
-.color-btn-1{
-    background-color: #6A6A6A;
-    border-radius: 100%;
-    }
-
-.color-btn-2 {
-    background-color: #0A3641;
-    border-radius: 100%; 
-    }
-
-.color-btn-3 {
-    background-color: #CE8147;
-    border-radius: 100%;
-    }
-
 
 
 h2 {
@@ -456,9 +431,8 @@ h5, h6 {
         }
 
         .grid-for-product-info {
-            display: grid; 
-            grid-template-columns: 3fr 1fr;
-            grid-template-rows: auto 1fr auto auto auto;
+            display: flex; 
+            flex-direction: column;
             gap: 20px; 
         }
 
