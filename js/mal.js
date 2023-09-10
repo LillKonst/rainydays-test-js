@@ -15,7 +15,17 @@ jacketContainer.innerHTML = `<div class="loading-animation">
 </div>`;
 
 
-
+if (jacket.onSale) {
+    const jacketPrice = document.createElement("p");
+    jacketPrice.classList.add("product-text2", "product-text3", "grid-pr-3");
+    jacketPrice.innerHTML = `<span class="discount product-text2 product-text3 grid-pr-3"> ${jacket.price} </span> | ${jacket.discountedPrice}`;
+    jacketText.appendChild(jacketPrice);          
+} else {
+    const jacketPrice = document.createElement("p");
+    jacketPrice.classList.add("product-text2", "product-text3", "grid-pr-3");
+    jacketPrice.innerHTML = `${jacket.price}`;
+    jacketText.appendChild(jacketPrice); 
+}
 
 
 

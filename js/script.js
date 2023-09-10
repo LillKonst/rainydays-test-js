@@ -36,17 +36,21 @@ async function displayJackets() {
             window.location.href = `products/jacket-details.html?id=${jacket.id}&title=${jacket.title}`;
             });
             jacketsContainer.appendChild(jacketDiv);
-        
+
             const image = document.createElement("img");
             image.src = jacket.image;
             image.alt = jacket.description;
             image.classList.add("s-product-img", "grid-pr-1");
             jacketDiv.appendChild(image);
+            
+            const jacketText = document.createElement("div");
+            jacketText.classList.add("jacketText");
+            jacketDiv.appendChild(jacketText);
 
             const jacketTitle = document.createElement("h2");
             jacketTitle.classList.add("product-text1", "grid-pr-2");
             jacketTitle.innerHTML = `${jacket.title}`;
-            jacketDiv.appendChild(jacketTitle);
+            jacketText.appendChild(jacketTitle);
 
             const jacketPrice = document.createElement("p");
             jacketPrice.classList.add("product-text2", "product-text3", "grid-pr-3");
@@ -54,14 +58,14 @@ async function displayJackets() {
             
             if (jacket.onSale) {
                 const jacketPrice = document.createElement("p");
-                jacketPrice.classList.add("product-text2", "product-text3", "grid-pr-3");
-                jacketPrice.innerHTML = `<span class="discount">${jacket.price} </span> | ${jacket.discountedPrice}`;
-                jacketDiv.appendChild(jacketPrice);          
+                jacketPrice.classList.add("product-text2", "product-text3", "grid-pr-3", "sale");
+                jacketPrice.innerHTML = `${jacket.discountedPrice}`;
+                jacketText.appendChild(jacketPrice);          
             } else {
                 const jacketPrice = document.createElement("p");
                 jacketPrice.classList.add("product-text2", "product-text3", "grid-pr-3");
                 jacketPrice.innerHTML = `${jacket.price}`;
-                jacketDiv.appendChild(jacketPrice); 
+                jacketText.appendChild(jacketPrice); 
             }
         }   
 } catch (error) {
