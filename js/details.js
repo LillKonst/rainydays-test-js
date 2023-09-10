@@ -1,6 +1,12 @@
+function showError(message){
+    const errorContainer = document.getElementById("jackets-container");
+    errorContainer.innerHTML = `<p> Error: ${message}</p>`;
+}
+
 function getJacketIdFromQuery() {
     const urlParams = new URLSearchParams(window.location.search);
-    return urlParams.get("id");
+    const id = urlParams.get("id");
+    return id;
 }
 
 function getJacketTitleFromQuery() {
@@ -8,28 +14,26 @@ function getJacketTitleFromQuery() {
     return urlParams.get("title");
 }
 
-function showLoadingIndicator() {
-    const itemList = document.getElementById("grid-for-product-info");
-    itemList.innerHTML = "<li>Loading...</li>";
-}
-
 async function fetchJacketDetail() {
-    const jacketId = getJacketIdFromQuery();
+    
     const title = getJacketTitleFromQuery();
-    
-    
+    const jacketId = getJacketIdFromQuery();
     if (!jacketId) {
-        return;
+        throw new Error("Jacket is not found");
     }
 
-const response = await fetch(`https://api.noroff.dev/api/v1/rainy-days/${jacketId}`);
-const jacketDetail = await response.json();
+    try {
+        const response = await fetch(`https://api.noroff.dev/api/v1/rainy-days/${jacketId}`);
+        if(!response.ok) {
+            throw new Error("Jacket is not found");
+        }
+        const jacketDetail = await response.json();
 
 
-const titleContainer = document.getElementById("title");
-const jacketDetailContainer = document.getElementById("jacket-details");
+        const titleContainer = document.getElementById("title");
+        const jacketDetailContainer = document.getElementById("jacket-details");
 
-titleContainer.textContent = title;
+        titleContainer.textContent = title;
 
 jacketDetailContainer.innerHTML = ""; 
 jacketDetailContainer.innerHTML += `<div class="grid-for-product-info">
@@ -52,9 +56,10 @@ jacketDetailContainer.innerHTML += `<div class="grid-for-product-info">
 
 <a href="/shoppingbag.html" id="addToBag">ADD TO BAG</a>
 </div>`;
+} catch (error) {
+    showError(error.message);
 }
-
-
+}
 
 fetchJacketDetail();
 
