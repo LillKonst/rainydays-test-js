@@ -8,6 +8,11 @@ function getJacketTitleFromQuery() {
     return urlParams.get("title");
 }
 
+function showLoadingIndicator() {
+    const itemList = document.getElementById("grid-for-product-info");
+    itemList.innerHTML = "<li>Loading...</li>";
+}
+
 async function fetchJacketDetail() {
     const jacketId = getJacketIdFromQuery();
     const title = getJacketTitleFromQuery();
@@ -52,16 +57,6 @@ jacketDetailContainer.innerHTML += `<div class="grid-for-product-info">
 
 
 fetchJacketDetail();
-
-
-//Add to button
-//<a href="#" class="add-to-button" id="shoppingbag" onclick="changeLocation();return false;"> ADD TO BAG</a>
-
-//<div class="size-container"> 
-   //       <button type="size" id="size" class="size-button" onclick=buttonSelector>${jacketDetail.sizes.map}</button>
-     //   </div>
-
-
 
     
 
