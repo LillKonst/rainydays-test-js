@@ -1,18 +1,15 @@
 /* main */
 
 main {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(7, auto);
-    gap: 30px;
+    display: flex;
+    flex-direction: column;
+    margin: 5px; 
+    gap: 10px; 
 }
 
 .main-image {
-    display: block;
-    grid-column: 1 / 3;
-    grid-row: 1;
-    margin-left: auto;  
-    margin-right: auto; 
+    display: flex;
+    max-width: 100%;
 }
 
 .main-image-mobile {
@@ -21,9 +18,12 @@ main {
 
 
 
-
 h4 {
     font-size: 2em;
+    font-weight: 600;
+    display: grid;
+    grid-column: 1;
+    grid-row: 1;
 }
 
 .s-product-img {
@@ -39,35 +39,23 @@ h4 {
 }
 
 .slide-container-1 {
-    grid-column: 1 / 3;
-    grid-row: 2;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    flex-direction: column;
 }
-.slider {
-    width:100%; 
+.slider { 
+    display: grid;
+    grid-column: 1;
+    grid-row: 2;
     display: flex;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
     scroll-snap-type: x mandatory;
     background-color: #F9F8F8;
+    white-space: nowrap;
 }
 
-.slide {
-    max-width: 350px;
-    flex-shrink: 0;
-    height: 100%;
-}
-
-.slides > div {
-    scroll-snap-align:start;
-    scroll-behavior: smooth;
-}
-
-.product-image-slide {
-    max-width: 100%; 
-}
-.product {
-    padding: 10px 10px 10px 10px;
-    }
     
 .floated {
         float: left;
@@ -83,15 +71,18 @@ h4 {
         font-size: 1.2em;
     }
 
+.split-section {
+    display: flex;
+    gap: 20px; 
 
+}
     .positioned-container {
-        grid-column: 1;
-        grid-row: 3 / 5; 
+        display: flex;
         position: relative;
     }
     
     .spring-collection-image {
-        max-width: fit-content;
+        max-width: 100%;
     }
     
     .positioned-new {
@@ -121,23 +112,20 @@ h4 {
     
     }
    
-    
-    
-    .positioned-container-2, .positioned-container-3 {
-        text-align: center;
-        display:flex;
-        justify-content: center;
-        align-items: center;
+    .duo-section {
+        display: flex;
+        flex-direction: column;
+        max-height: 100%;
+        gap: 20px; 
     }
-    
+
     .positioned-container-2 {
-        grid-column: 2 ;
-        grid-row: 3; 
         background-color:#7A9B76;
         display: flex;
         flex-direction: column;
         justify-content: center;
         text-align: center; 
+        height: 100%;
     }
         
     .rd {
@@ -170,8 +158,6 @@ h4 {
 
 
     .positioned-container-3 {
-        grid-column: 2;
-        grid-row: 4;
         background-image: url(/images/nikhil-prasad-h-C4l0-MHGY-unsplash.jpg);
         background-size: cover;
         background-position: center;
@@ -180,6 +166,7 @@ h4 {
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-end;
+        height: 100%; 
       }
       
       .blog-text-1 {
@@ -188,7 +175,7 @@ h4 {
         align-items: flex-end;
         padding: 10px 10px 0px 0px;
         margin: 0px;
-        font-size: 1.5em;
+        font-size: 1.5rem;
         font-weight: 500;
         color: #06232A;
       }
@@ -199,66 +186,54 @@ h4 {
         align-items: flex-end;
         padding-right: 10px;
         margin: 0px;
-        font-size: 1.5em;
+        font-size: 1.5rem;
         font-weight: 400;
         color: #06232A;
       }
 
 
-.slide-container-2 {
-    grid-column: 1 / 3;
-    grid-row: 5;
-}
-
-.slide-container-3 {
-    grid-column: 1 / 3;
-    grid-row: 6;
-}
-
-
-
-
 .positioned-container-some {
-    grid-column: 1 / 3 ;
-    grid-row: 7 ;
-    gap: 30px; 
     display: flex;
+    position: relative;
+    max-width: 100%;
 }
 
 .some-image {
-    max-width: 600px; 
+    max-width: 100%; 
+    height: auto;
 }
+ 
+.some-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center; 
+    color: #000000;
+    padding: 20px;
+    text-align: center;
+  }
 
-.positioned-container-some-1 { 
-        background-color:#7A9B76;
-        display: flex;
-        flex-wrap: wrap;
-        text-align: center; 
-        justify-content: space-around;     
-    }    
-
-    
-    .some-text-1 {
-
-        font-size: 3em;
+.some-text {
+        font-size: 2rem;
         font-weight: 600;
-        margin: 0px;
-        padding-top: 5%;
-        padding-left: 15%;
-        padding-right: 15%;
+       
     }
     
     .some-text-2 {
-        padding-top: 2%;
+        font-size: 1.5rem;
     }
     
-    .some-text-3 {
-        font-size: 2em;
-        margin: 0px;
-        font-weight: 500;
-    }
+    
     .icons-some {
         max-width: 80px;
+        position: absolute;
+        bottom: 0; 
+        right: 0;
     }
 
 
@@ -267,42 +242,21 @@ h4 {
 }
 
 
-
-@media (max-width: 1020px) {
-
-    .main-image {
-        max-width: 800px;
+@media (max-width: 1200px) {
+    .some-text {
+        font-size: 1.5rem;
     }
 
-    .some-display-none {
-        display: none;
-
+    .some-text-2 {
+        font-size: 1rem;
     }
-    .positioned-container-some {
-        grid-column: 1 / 3;
-        grid-row: 7;
-        background-image: url(/images/istockphoto-1320993309-170667a.jpg);
-        background-size: contain;
-        background-repeat: no-repeat;
-        min-height: 50vh;
-        display: flex; 
-        flex-direction: column;
-        text-align: end;
-        justify-content: flex-start;
-        align-items: flex-end;
+}
 
-        
-    }
 
-    .positioned-container-some-1 {
-        display: flex; 
-        flex-direction: column;
-        text-align: center;
-        justify-content: center;
-        align-items: center;
-        background: fixed;
-        
-    }
+
+@media (max-width: 1030px) {
+
+    
 
     .some-text-1 {
         font-size: 1.5em;
@@ -347,26 +301,24 @@ h4 {
     .div-p {
         font-size: 1em;
     }
+
+    .club-text {
+        font-size: 2rem;
+
+    }
+
+    .club-text-2 {
+        font-size: 1rem;
+
+    }
 }
 
 
-@media (max-width: 900px) {
+@media (max-width: 935px) {
 
-    main {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(8, auto);
-    gap: 30px;  
-    }
-    
-    .main-image {
-        max-width: 600px;
-    }
+
     .positioned-container {
-        grid-column: 1 / 3;
-        grid-row:3;
-        display: flex;
+        display: flex;+
         flex-direction: row;
         justify-content: center;
         align-items: flex-start;
@@ -389,10 +341,6 @@ h4 {
     
     }
     
-    .positioned-container-2 {
-        grid-column: 1 / 3;
-        grid-row: 2;
-    }
 
     .rd {
 
@@ -421,11 +369,15 @@ h4 {
         margin-bottom: 10px;
     }
 
-    .positioned-container-3 {
-        grid-column: 1 / 3;
-        grid-row: 6;
-        min-height: 100vh;
-    }
+  .some-text{
+    font-size: 1rem;
+  }
+
+  .some-text-2{
+    font-size:0.8rem; 
+  }
+    
+
 
 }
 
@@ -435,19 +387,20 @@ h4 {
         }
     
         .main-image-mobile {
-            display: block;
-            grid-column: 1 / 3;
-            grid-row: 1;
-            margin-left: auto;  
-            margin-right: auto; 
+            display: flex;
+            max-width: 100%;  
             }
             
     .mobile-display {
         display: none;
     }
 
-    .positioned-container-some {
-        min-height: 40vh;
+    .split-section {
+        flex-direction: column;
+    }
+
+    .positioned-container-3 {
+        height: auto; 
     }
 
 
@@ -455,42 +408,23 @@ h4 {
 
 
 
-@media (max-width: 600px) {
+@media (max-width: 650px) {
 
-    main {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(8, auto);
-    gap: 30px;  
+    .blog-text-1 {
+        font-size: 1rem;
     }
 
-    .slide-container-1 {
-        display: none; 
+    .blog-text-2 {
+        font-size: 0.8rem
+
     }
 
-    .slide-container-2 {
-        grid-column: 1 / 3;
-        grid-row: 4;
-    }
-
-    .slide-container-3 {
-        grid-column: 1 / 3;
-        grid-row: 5;
-    }
-
-    .positioned-container-some {
-        min-height: 30vh;
-    }
 
 }
 
 
 @media (max-width: 450px) {
-    main {
-        grid-template-columns: 1fr;
-        padding: 2% 5%;
-    }
+    
     .positioned-new {
         font-size: 2em;
      
