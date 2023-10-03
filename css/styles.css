@@ -26,6 +26,7 @@ h4 {
 .product-text1 {
     font-size: .8em;
     font-weight: 500; 
+    padding-bottom: 10px;
 }
 .product-text3 {
     display:none;

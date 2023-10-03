@@ -24,7 +24,7 @@ main {
 .jacketDiv {
     display: flex;
     flex-direction: column;
-    width: 30%; 
+    width: 20%; 
     margin: 10px;    
 }
 
@@ -32,10 +32,6 @@ main {
     display: flex;
     justify-content: space-between;
     margin-top: 10px; 
-}
-
-.s-product-img {
-    width:100%;
 }
 
 

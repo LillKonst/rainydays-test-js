@@ -42,7 +42,9 @@ jacketDetailContainer.innerHTML += `<div class="grid-for-product-info">
 <h1>${jacketDetail.title}</h1>
 <h2>${jacketDetail.price}</h2>
 <p>${jacketDetail.description}</p>
+</div>
 
+<div class="grid-con-prod-3">
 <form>
 <fieldset class="size-container">
     <legend>SELECT SIZE</legend>
