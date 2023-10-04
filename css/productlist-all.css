@@ -70,7 +70,11 @@ a {
 }
 
 
-
+@media (max-width:1200px) {
+    .jacketDiv {
+        width: 30%; 
+    }
+}
 
 @media (max-width:900px) {
 
@@ -78,19 +82,26 @@ a {
         display: none;
     } 
 
+    .jacketDiv {
+        width: 40%;  
+    }
+
 
 }
 
-@media (max-width:666px) {
+@media (max-width:600px) {
 
     #jackets-container {
         gap: 10px; 
+        flex-direction: column;
     }
 
    .jacketDiv {
-    max-width: 40%;
+    max-width: 100%;
     margin: 5px; 
     gap: 10px; 
+    align-self: center;
+    
    }
 
 
