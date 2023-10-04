@@ -75,6 +75,7 @@ header {
     font-size: 20px; 
     width: fit-content; 
     padding: 10px; 
+    color: #0A3641
    }
      
      .logo {
@@ -422,6 +423,7 @@ a {
     .hamburger-icon {
         font-size: 2.5em; 
         padding: 10px;
+        color: #0A3641;
     }
     
     .logo {
@@ -432,6 +434,9 @@ a {
       }
 
     .logo-img {
+        min-width: 200px;
+        min-height: 60px;
+        flex-grow: 4;
     }
     
     .mobile-grid3 {
@@ -558,6 +563,7 @@ a {
         display: flex;
         flex-direction: column;
         text-align: center;
+        align-items: center;
 
    }
       
@@ -621,6 +627,14 @@ a {
         padding: 10px 20px;
     }
 
+}
+
+
+@media (max-width: 500px) {
+    .logo-img {
+        min-width: 150px;
+        min-height: 50px;
+    }
 }
 
 
