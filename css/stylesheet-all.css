@@ -502,6 +502,7 @@ a {
   
   #hamburger-menu:checked ~ nav {
     display: flex;
+    z-index: 999;
   }
   
   #hamburger-menu {
