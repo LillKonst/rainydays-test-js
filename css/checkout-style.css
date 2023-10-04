@@ -64,7 +64,6 @@ main {
 .grid7 {
     grid-column: 1;
     grid-row: 5;
-    padding: 0% 10% 0% 10%
 }
 
 .top-guide {
@@ -285,8 +284,7 @@ input, select, textarea ¤ {
     background-color: #CE8147;
     font-size: 2em; 
     font-weight: 600;
-    padding-left: 35%;
-    white-space: nowrap;
+    align-items: center;
     border: none;
     border-radius: 15px; 
     margin: 0px;
@@ -372,7 +370,6 @@ h3 {
     .grid7 {
         grid-column: 1;
         grid-row: 8;
-        padding: 0% 10% 0% 10%
     }
 
     .grid-mobile-8 {
@@ -396,9 +393,8 @@ h3 {
         font-weight: 600;
         white-space: nowrap;
         border: none;
-        border-radius: 3px; 
-        margin: 0px;
-        height: 20vh; 
+        margin: 0px; 
+        padding: 10px 20px;
     }
     .greenbox {
         background-color: #F9F8F8;

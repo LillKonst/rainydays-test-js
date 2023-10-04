@@ -418,5 +418,9 @@ h5, h6 {
         padding: 0px; 
         align-items: center;
     }
+
+    #addToBag {
+        padding: 10px 20px; 
+    }
 }
 
