@@ -434,7 +434,7 @@ a {
       }
 
     .logo-img {
-        min-width: 200px;
+        min-width: 150px;
         min-height: 60px;
         flex-grow: 4;
     }
@@ -632,7 +632,7 @@ a {
 
 @media (max-width: 500px) {
     .logo-img {
-        min-width: 150px;
+        min-width: 100px;
         min-height: 50px;
     }
 }
