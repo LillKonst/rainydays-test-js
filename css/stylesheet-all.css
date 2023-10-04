@@ -134,10 +134,6 @@ header {
 .mob-display {
     display: none; 
 }  
-   .svg {
-       width: 50px;
-       padding-left: 20px;
-   }
 
    #hamburger-menu {
     display: none; 
@@ -145,6 +141,10 @@ header {
 
    .mobile-grid1 {
     display: none;
+   }
+
+   a {
+    width: fit-content;
    }
 
    
@@ -402,8 +402,6 @@ a {
 
 @media (max-width: 800px) {
 
-
-
     main {
         padding-right: 50px; 
         padding-left: 50px; 
@@ -411,23 +409,29 @@ a {
 
     header {
         display: flex;
-        height: 20vh; 
-    }
+        height: 30vh;
+        align-items: flex-end;
+        }
     
     .mobile-grid1 {
         display: flex;
         order: 1;
         width: fit-content;
     }
+
+    .hamburger-icon {
+        font-size: 2.5em; 
+        padding: 10px;
+    }
     
     .logo {
         display: flex;
         order: 2;
+        width: fit-content;
+        padding: 10px;
       }
-    
-      .logo-img {
-        width: 500px;
-    
+
+    .logo-img {
     }
     
     .mobile-grid3 {
@@ -443,9 +447,12 @@ a {
     .icons-flex-direction {
         display: flex;
         flex-direction: row;
-        justify-content: ;
-        align-items: flex-end;
         flex-wrap: nowrap;
+        width: fit-content;
+    }
+
+    .header-icons {
+        font-size: 2em;
     }
     
     
@@ -454,10 +461,10 @@ a {
     }
 
     .main-nav {
-        grid-column: 1;
-        grid-row: 2;  
         background-color: #7A9B76;
         border-radius: 5px;
+        align-self: flex-start;
+        
       }
 
     .text-link-menu {
@@ -465,11 +472,6 @@ a {
         flex-direction: column;
         justify-content: space-between;
         align-items: flex-start;
-    }
-    
-    .svg {
-        width: 40px;
-        padding-left: 20px;
     }
     
     .searchbar {
@@ -494,7 +496,7 @@ a {
   }
   
   #hamburger-menu:checked ~ nav {
-    display: block;
+    display: flex;
   }
   
   #hamburger-menu {
@@ -502,7 +504,7 @@ a {
   }
   
   nav li {
-    display: block;
+    display: flex;
     padding: 10px;
   }
 
