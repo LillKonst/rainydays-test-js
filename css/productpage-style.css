@@ -42,8 +42,7 @@ h1 {
     display: grid; 
     grid-template-columns: auto 1fr;
     grid-template-rows: repeat(3, auto);
-    gap: 10px; 
-    padding-right: 30px;  
+    gap: 10px;  
 }
 
 .grid-con-prod-2 {
@@ -414,7 +413,7 @@ h5, h6 {
     
     .product-pic {
         display: flex;
-        width: 500px;
+        width: 100%;
         padding: 0px; 
         align-items: center;
     }

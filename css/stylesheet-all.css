@@ -429,7 +429,7 @@ a {
     .logo-img {
         min-width: 150px;
         min-height: 60px;
-        flex-grow: 4;
+        flex-grow: 2;
     }
     
     .mobile-grid3 {
@@ -451,6 +451,14 @@ a {
 
     .header-icons {
         font-size: 2em;
+    }
+
+    .bottom-left-mobile {¨
+        padding: 10px; 
+    }
+
+    top-right-nav-f{
+        padding: 10px;
     }
     
     
@@ -630,8 +638,15 @@ a {
 @media (max-width: 500px) {
     .logo-img {
         min-width: 100px;
-        min-height: 50px;
+        min-height: 40px;
     }
+
+    .header-icons {
+        font-size: 20px; 
+        width: fit-content; 
+        padding: 5px; 
+        color: #0A3641
+       }
 }
 
 
