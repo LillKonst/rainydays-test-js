@@ -164,13 +164,7 @@ h4 {
 
     
     .underline-button-flex {
-        font-size: 1.5em;
-        font-weight: 500;
-        color:#F9F8F8;
-        text-decoration: underline;
-        position: absolute;
-        bottom: 45px;
-        text-align: center;
+        width: fit-content;
 
     }
    
