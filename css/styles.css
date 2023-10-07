@@ -416,15 +416,6 @@ h4 {
             display: flex;
             max-width: 100%;  
             }
-
-        .fall-text {
-                font-size: 5em;
-                font-weight: 600;
-                margin: 0;
-                z-index: 999;
-                bottom: 40%
-
-        }
             
             
     .mobile-display {
