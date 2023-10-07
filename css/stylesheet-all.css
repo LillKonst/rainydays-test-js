@@ -682,8 +682,30 @@ a {
         max-width: 300px;
     }
 
-    .logo {
+    .logo-img {
         margin: 0px;
         min-width: 60px;
+        height: auto;
+    }
+
+    .logo {
+        padding: 10px 0px;
+    }
+
+    header {
+        gap: 3px;
+    }
+
+    .header-icons {
+        padding: 5px;
+    }
+
+    .bottom-left {
+        padding: 10px 5px;
+    }
+
+    .hamburger-icon {
+        font-size: 1.8em;
+        padding: 10px 3px;
     }
 }
