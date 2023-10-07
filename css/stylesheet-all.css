@@ -453,12 +453,12 @@ a {
         font-size: 2em;
     }
 
-    .bottom-left-mobile {¨
-        padding: 10px; 
+    .bottom-left {
+        padding: 15px; 
     }
 
-    top-right-nav-f{
-        padding: 10px;
+    .top-right-nav-f{
+        padding: 5px;
     }
     
     
@@ -506,7 +506,7 @@ a {
     z-index: 999;
     position: absolute;
     top: 110px;
-    width: fit-content;
+    width: 90%;
   }
   
   #hamburger-menu {
@@ -632,10 +632,21 @@ a {
         padding: 10px 20px;
     }
 
+    #hamburger-menu:checked ~ nav {
+        top: 100px;
+        width: 100%;
+      }
+
 }
 
 
 @media (max-width: 500px) {
+
+    #hamburger-menu:checked ~ nav {
+        top: 80px;
+        width: 100%;
+      }
+
     .logo-img {
         min-width: 100px;
         min-height: 40px;
@@ -643,14 +654,14 @@ a {
 
     .header-icons {
         font-size: 20px; 
-        width: fit-content; 
-        padding: 5px; 
-        color: #0A3641
+        
        }
 }
 
 
 @media (max-width: 450px) {
+
+
     footer {
         padding: 2% 5%;
     }
