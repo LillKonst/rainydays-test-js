@@ -303,8 +303,8 @@ footer p, .footer-text2 {
 }
 
 
-.s-product-img {
-    width:100%;
+.s-product-img, .slider-img {
+    width: auto;
     height: 250px;
     object-fit: contain;
 }
@@ -410,7 +410,6 @@ a {
 
     header {
         display: flex;
-        height: 30vh;
         align-items: flex-end;
         }
     
@@ -503,6 +502,9 @@ a {
   #hamburger-menu:checked ~ nav {
     display: flex;
     z-index: 999;
+    position: absolute;
+    top: 110px;
+    width: fit-content;
   }
   
   #hamburger-menu {
@@ -632,6 +634,11 @@ a {
 
 @media (max-width: 600px) {
 
+    .s-product-img {
+        width: 100%;
+        height: fit-content;
+        align-self: center;
+    }
 }
 
 

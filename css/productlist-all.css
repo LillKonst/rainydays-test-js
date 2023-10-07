@@ -34,6 +34,12 @@ main {
     margin-top: 10px; 
 }
 
+.s-product-img {
+    width:100%;
+    height: 250px;
+    object-fit: contain;
+}
+
 
 /* within product grid */
 
@@ -97,11 +103,17 @@ a {
     }
 
    .jacketDiv {
-    max-width: 100%;
+    width: 80%;
     margin: 5px; 
     gap: 10px; 
     align-self: center;
     
+   }
+
+   .s-product-img {
+    width: 100%;
+    height: fit-content;
+    align-self: center;
    }
 
 

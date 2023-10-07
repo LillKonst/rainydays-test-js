@@ -20,7 +20,7 @@ async function getJackets() {
 }
 
 
-async function displayJackets() {
+async function displayJacketsProductList() {
     try {
     const jackets = await getJackets();
     const jacketsContainer = document.getElementById("jackets-container");
@@ -40,7 +40,7 @@ async function displayJackets() {
             const image = document.createElement("img");
             image.src = jacket.image;
             image.alt = jacket.description;
-            image.classList.add("s-product-img", "grid-pr-1");
+            image.classList.add("s-product-img", "slider-img", "grid-pr-1");
             jacketDiv.appendChild(image);
             
             const jacketText = document.createElement("div");
@@ -72,6 +72,56 @@ async function displayJackets() {
     showError(error.message);
 } 
 }
+    
+document.addEventListener("DOMContentLoaded", () => {
+    displayJacketsProductList();
+});
+
+
+function showErrorSlider(message){
+    const errorSlider = document.getElementById("jacket-slider1");
+    errorSlider.innerHTML = `<p> Error: ${message}</p>`;
+}
+
+async function displayJacketSlider() {
+    try {
+    const jackets = await getJackets();
+    const jacketSlider1 = document.getElementById("jacket-slider1");
+    jacketSlider1.innerHTML = "";
+
+    
+    for(i = 0; i < jackets.length; i++) {
+        const jacket = jackets[i];
+        
+            if (jacket.favorite) {
+                
+            const jacketDiv = document.createElement("a");
+            jacketDiv.classList.add("jacketDiv");
+            jacketDiv.addEventListener("click", () => {
+            window.location.href = `products/jacket-details.html?id=${jacket.id}&title=${jacket.title}`;
+            });
+            jacketSlider1.appendChild(jacketDiv);
+
+            const image = document.createElement("img");
+            image.src = jacket.image;
+            image.alt = jacket.description;
+            image.classList.add("slider-img");
+            jacketDiv.appendChild(image);
+            
+            const jacketText = document.createElement("div");
+            jacketText.classList.add("jacketText");
+            jacketDiv.appendChild(jacketText);
+
+            const jacketTitle = document.createElement("h2");
+            jacketTitle.classList.add("product-text1", "grid-pr-2");
+            jacketTitle.innerHTML = `${jacket.title}`;
+            jacketText.appendChild(jacketTitle);        
+            } 
+        }   
+} catch (error) {
+    showErrorSlider(error.message);
+} 
+}
 
 function showLoadingIndicator() {
     const itemList = document.getElementById("jackets-container");
@@ -79,5 +129,5 @@ function showLoadingIndicator() {
 }
     
 document.addEventListener("DOMContentLoaded", () => {
-    displayJackets();
+    displayJacketSlider();
 });
