@@ -1,5 +1,23 @@
 /* main */
 
+.club-text {
+    font-size: 1em;
+}
+
+.club-link {
+    font-weight: 600;
+    padding: 0px 5px;
+}
+
+.club-text-b {
+    background-color: #7A9B76;
+    align-self: center;
+    text-align: center;
+    width: 100%;
+
+}
+
+
 .main-image {
     display: flex;
     max-width: 100%;
@@ -323,15 +341,6 @@ h4 {
         font-size: 1em;
     }
 
-    .club-text {
-        font-size: 2rem;
-
-    }
-
-    .club-text-2 {
-        font-size: 1rem;
-
-    }
 }
 
 
@@ -403,6 +412,8 @@ h4 {
 }
 
 @media (max-width: 800px) {
+
+  
     .main-image { 
         display: none; 
         }
@@ -434,6 +445,10 @@ h4 {
 }
 
 @media (max-width: 500px) {
+
+    .club-text {
+        font-size: 0.8em;
+    }
 
     .fall-text {
         font-size: 3em;
