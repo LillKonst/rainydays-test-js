@@ -214,8 +214,8 @@ h4 {
         align-items: flex-end;
         padding: 10px 10px 0px 0px;
         margin: 0px;
-        font-size: 1.5rem;
-        font-weight: 500;
+        font-size: 2rem;
+        font-weight: 400;
         color: #06232A;
       }
       
@@ -225,8 +225,8 @@ h4 {
         align-items: flex-end;
         padding-right: 10px;
         margin: 0px;
-        font-size: 1.5rem;
-        font-weight: 400;
+        font-size: 2rem;
+        font-weight: 600;
         color: #06232A;
       }
 
@@ -407,6 +407,13 @@ h4 {
     font-size:0.8rem; 
   }
     
+  .blog-text-1 {
+    font-size: 1.5em;
+  }
+
+  .blog-text-2 {
+    font-size: 2em; 
+  }
 
 
 }
@@ -437,8 +444,28 @@ h4 {
         flex-direction: column;
     }
 
+    .positioned-container-2 {
+        height: auto; 
+    }
+
     .positioned-container-3 {
-        height: 700px; 
+        height: 600px; 
+    }
+
+    .positioned-new {
+        font-size: 3em;
+    }
+
+    .positioned-sc {
+        font-size: 4em;
+    }
+
+    .blog-text-1 {
+        font-size: 2.4em; 
+    }
+
+    .blog-text-2 {
+        font-size: 3.4em;
     }
 
 
@@ -453,8 +480,31 @@ h4 {
     .fall-text {
         font-size: 3em;
         bottom: 20%
+    }
 
-}
+    .positioned-new {
+        font-size: 2em;
+    }
+
+    .positioned-sc {
+        font-size: 3em;
+    }
+
+    .positioned-container-3 {
+        height: 300px; 
+    }
+
+    .blog-text-1 {
+        font-size: 1.5em;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .blog-text-2 {
+        font-size: 2em;
+        align-items: center;
+        justify-content: center;
+    }
 }
 
 
