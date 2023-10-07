@@ -424,6 +424,7 @@ a {
         order: 2;
         width: fit-content;
         padding: 10px;
+        
       }
 
     .logo-img {
@@ -684,7 +685,7 @@ a {
 
     .logo-img {
         margin: 0px;
-        min-width: 60px;
+        min-width: 80px;
         height: auto;
     }
 
