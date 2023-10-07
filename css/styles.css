@@ -150,6 +150,29 @@ h4 {
         margin: 0;
     
     }
+
+    .underline-button {
+        font-size: 1.5em;
+        font-weight: 500;
+        color:#F9F8F8;
+        text-decoration: underline;
+        position: absolute;
+        bottom: 40px;
+        text-align: center;
+
+    }
+
+    
+    .underline-button-flex {
+        font-size: 1.5em;
+        font-weight: 500;
+        color:#F9F8F8;
+        text-decoration: underline;
+        position: absolute;
+        bottom: 45px;
+        text-align: center;
+
+    }
    
     .duo-section {
         display: flex;
@@ -165,6 +188,7 @@ h4 {
         flex-direction: column;
         justify-content: center;
         text-align: center; 
+        align-items: center;
         height: 100%;
     }
         
@@ -178,7 +202,7 @@ h4 {
     
     h5 {
         text-align: center;
-        font-size: 3.5em;
+        font-size: 3em;
         font-weight: 600; 
         margin: 0px;
     }
@@ -200,12 +224,12 @@ h4 {
         background-image: url(/images/nikhil-prasad-h-C4l0-MHGY-unsplash.jpg);
         background-size: cover;
         background-position: center;
-        position: relative;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-end;
         height: 100%; 
+        position: relative;
       }
       
       .blog-text-1 {
