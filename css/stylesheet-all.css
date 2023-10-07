@@ -303,12 +303,6 @@ footer p, .footer-text2 {
 }
 
 
-.s-product-img, .slider-img {
-    width: auto;
-    height: 250px;
-    object-fit: contain;
-}
-
 h1, h2, h3, h4, h5, h6 {
     font-size: 2em; 
 }
@@ -630,15 +624,6 @@ a {
         padding: 10px 20px;
     }
 
-}
-
-@media (max-width: 600px) {
-
-    .s-product-img {
-        width: 100%;
-        height: fit-content;
-        align-self: center;
-    }
 }
 
 

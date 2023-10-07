@@ -72,6 +72,12 @@ h4 {
     white-space: nowrap;
 }
 
+.slider-img {
+    width: auto;
+    height: 250px;
+    object-fit: contain;
+}
+
     
 .floated {
         float: left;
