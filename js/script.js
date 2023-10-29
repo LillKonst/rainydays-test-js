@@ -1,4 +1,10 @@
-const rainyDaysAPI = "https://api.noroff.dev/api/v1/rainy-days/";
+//const rainyDaysAPI = "https://rainydays-api.lillkonst.no//wp-json/wc/store/products";
+
+const corsAnywhereUrl = "https://noroffcors.onrender.com/";
+const originalUrl = "https://rainydays-api.lillkonst.no//wp-json/wc/store/products";
+const rainyDaysAPI = corsAnywhereUrl + originalUrl;
+
+
 
 function showError(message){
     const errorContainer = document.getElementById("jackets-container");
@@ -13,6 +19,7 @@ async function getJackets() {
         throw new Error("Something went wrong");
     }
     const results = await response.json();
+    console.log(results)
     return results;
     } catch (error) {
         throw error; 
@@ -38,7 +45,7 @@ async function displayJacketsProductList() {
             jacketsContainer.appendChild(jacketDiv);
 
             const image = document.createElement("img");
-            image.src = jacket.image;
+            image.src = jacket.images;
             image.alt = jacket.description;
             image.classList.add("s-product-img", "slider-img", "grid-pr-1");
             jacketDiv.appendChild(image);
@@ -49,12 +56,13 @@ async function displayJacketsProductList() {
 
             const jacketTitle = document.createElement("h2");
             jacketTitle.classList.add("product-text1", "grid-pr-2");
-            jacketTitle.innerHTML = `${jacket.title}`;
+            jacketTitle.innerHTML = `${jacket.name}`;
+            console.log(jacket.name)
             jacketText.appendChild(jacketTitle);
 
             const jacketPrice = document.createElement("p");
             jacketPrice.classList.add("product-text2", "product-text3", "grid-pr-3");
-            jacketPrice.innerHTML = `${jacket.price} ${jacket.discountedPrice}`;
+            jacketPrice.innerHTML = `${jacket.prices.price} ${jacket.discountedPrice}`;
             
             if (jacket.onSale) {
                 const jacketPrice = document.createElement("p");
@@ -64,7 +72,7 @@ async function displayJacketsProductList() {
             } else {
                 const jacketPrice = document.createElement("p");
                 jacketPrice.classList.add("product-text2", "product-text3", "grid-pr-3");
-                jacketPrice.innerHTML = `${jacket.price}`;
+                jacketPrice.innerHTML = `${jacket.prices.price}`;
                 jacketText.appendChild(jacketPrice); 
             }
         }   
@@ -76,7 +84,6 @@ async function displayJacketsProductList() {
 document.addEventListener("DOMContentLoaded", () => {
     displayJacketsProductList();
 });
-
 
 function showErrorSlider(message){
     const errorSlider = document.getElementById("jacket-slider1");
@@ -103,7 +110,7 @@ async function displayJacketSlider() {
             jacketSlider1.appendChild(jacketDiv);
 
             const image = document.createElement("img");
-            image.src = jacket.image;
+            image.src = jacket.images;
             image.alt = jacket.description;
             image.classList.add("slider-img");
             jacketDiv.appendChild(image);
@@ -114,7 +121,7 @@ async function displayJacketSlider() {
 
             const jacketTitle = document.createElement("h2");
             jacketTitle.classList.add("product-text1", "grid-pr-2");
-            jacketTitle.innerHTML = `${jacket.title}`;
+            jacketTitle.innerHTML = `${jacket.name}`;
             jacketText.appendChild(jacketTitle);        
             } 
         }   

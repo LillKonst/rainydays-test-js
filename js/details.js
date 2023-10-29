@@ -23,7 +23,7 @@ async function fetchJacketDetail() {
     }
 
     try {
-        const response = await fetch(`https://api.noroff.dev/api/v1/rainy-days/${jacketId}`);
+        const response = await fetch(`rainyDaysAPI + ${jacketId}`);
         if(!response.ok) {
             throw new Error("Jacket is not found");
         }
@@ -37,9 +37,9 @@ async function fetchJacketDetail() {
 
 jacketDetailContainer.innerHTML = ""; 
 jacketDetailContainer.innerHTML += `<div class="grid-for-product-info">
-<img src="${jacketDetail.image}" class="product-pic" alt="${jacketDetail.description}">
+<img src="${jacketDetail.images}" class="product-pic" alt="${jacketDetail.description}">
 <div class="grid-con-prod-2">
-<h1>${jacketDetail.title}</h1>
+<h1>${jacketDetail.name}</h1>
 <h2>${jacketDetail.price}</h2>
 <p>${jacketDetail.description}</p>
 </div>
