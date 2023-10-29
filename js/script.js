@@ -1,5 +1,5 @@
 const corsAnywhereUrl = "https://noroffcors.onrender.com/";
-const originalUrl = "https://rainydays-api.lillkonst.no//wp-json/wc/store/products";
+const originalUrl = "https://rainydays-api.lillkonst.no/wp-json/wc/store/products";
 const rainyDaysAPI = corsAnywhereUrl + originalUrl;
 
 
