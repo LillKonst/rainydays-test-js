@@ -39,7 +39,7 @@ async function fetchJacketDetail() {
         titleContainer.textContent = title;
 
         const imageSrc = jacketDetail.images[0].src;
-        const price = jacketDetail.prices.price_html;
+        const price = jacketDetail.prices.price/100;
 
         const availableSizes = jacketDetail.attributes.map(attr => attr.name);
 

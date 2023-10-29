@@ -69,7 +69,7 @@ async function displayJacketsProductList() {
             } else {
                 const jacketPrice = document.createElement("p");
                 jacketPrice.classList.add("product-text2", "product-text3", "grid-pr-3");
-                jacketPrice.innerHTML = `${jacket.prices.price}`;
+                jacketPrice.innerHTML = `${jacket.prices.price/100}`;
                 jacketText.appendChild(jacketPrice); 
             }
         }   
