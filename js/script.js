@@ -97,7 +97,7 @@ async function displayJacketSlider() {
     for(i = 0; i < jackets.length; i++) {
         const jacket = jackets[i];
         
-            if (jacket.favorite) {
+            if (jacket.name) {
                 
             const jacketDiv = document.createElement("a");
             jacketDiv.classList.add("jacketDiv");

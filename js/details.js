@@ -2,7 +2,7 @@ const corsAnywhereUrl = "https://noroffcors.onrender.com/";
 const originalUrl = "https://rainydays-api.lillkonst.no//wp-json/wc/store/products";
 const rainyDaysAPI = corsAnywhereUrl + originalUrl;
 
-function showError(message){
+function showError(message) {
     const errorContainer = document.getElementById("jackets-container");
     errorContainer.innerHTML = `<p> Error: ${message}</p>`;
 }
@@ -19,57 +19,54 @@ function getJacketTitleFromQuery() {
 }
 
 async function fetchJacketDetail() {
-    
     const title = getJacketTitleFromQuery();
     const jacketId = getJacketIdFromQuery();
     if (!jacketId) {
-        throw new Error("Jacket is not found");
+        showError("Jacket is not found");
+        return;
     }
 
     try {
-        const response = await fetch(rainyDaysAPI + jacketId);
-        if(!response.ok) {
+        const response = await fetch(`${rainyDaysAPI}/${jacketId}`);
+        if (!response.ok) {
             throw new Error("Jacket is not found");
         }
         const jacketDetail = await response.json();
-
 
         const titleContainer = document.getElementById("title");
         const jacketDetailContainer = document.getElementById("jacket-details");
 
         titleContainer.textContent = title;
 
-jacketDetailContainer.innerHTML = ""; 
-jacketDetailContainer.innerHTML += `<div class="grid-for-product-info">
-<img src="${jacketDetail.images}" class="product-pic" alt="${jacketDetail.description}">
-<div class="grid-con-prod-2">
-<h1>${jacketDetail.name}</h1>
-<h2>${jacketDetail.price}</h2>
-<p>${jacketDetail.description}</p>
-</div>
+        const imageSrc = jacketDetail.images[0].src;
+        const price = jacketDetail.prices.price_html;
 
-<div class="grid-con-prod-3">
-<form>
-<fieldset class="size-container">
-    <legend>SELECT SIZE</legend>
-     ${jacketDetail.sizes.map((size) => `
-    <input type="radio" id="${size}" value="${size}" name="size" />
-    <label for="${size}">${size}</label>
-    `).join("")} 
-</fieldset>
+        const availableSizes = jacketDetail.attributes.map(attr => attr.name);
 
-</form>
-
-<a href="/shoppingbag.html" id="addToBag">ADD TO BAG</a>
-</div>`;
-} catch (error) {
-    showError(error.message);
-}
+        jacketDetailContainer.innerHTML = `
+            <div class="grid-for-product-info">
+                <img src="${imageSrc}" class="product-pic" alt="${jacketDetail.description}">
+                <div class="grid-con-prod-2">
+                    <h1>${jacketDetail.name}</h1>
+                    <h2>${price}</h2>
+                    <p>${jacketDetail.description}</p>
+                </div>
+                <div class="grid-con-prod-3">
+                    <form>
+                        <fieldset class="size-container">
+                            <legend>SELECT SIZE</legend>
+                            ${availableSizes.map(size => `
+                                <input type="radio" id="${size}" value="${size}" name="size" />
+                                <label for="${size}">${size}</label>
+                            `).join("")} 
+                        </fieldset>
+                    </form>
+                    <a href="/shoppingbag.html" id="addToBag">ADD TO BAG</a>
+                </div>
+            `;
+    } catch (error) {
+        showError(error.message);
+    }
 }
 
 fetchJacketDetail();
-
-    
-
-
-
