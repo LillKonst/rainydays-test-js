@@ -1,3 +1,7 @@
+const corsAnywhereUrl = "https://noroffcors.onrender.com/";
+const originalUrl = "https://rainydays-api.lillkonst.no//wp-json/wc/store/products";
+const rainyDaysAPI = corsAnywhereUrl + originalUrl;
+
 function showError(message){
     const errorContainer = document.getElementById("jackets-container");
     errorContainer.innerHTML = `<p> Error: ${message}</p>`;
@@ -23,7 +27,7 @@ async function fetchJacketDetail() {
     }
 
     try {
-        const response = await fetch(`rainyDaysAPI + ${jacketId}`);
+        const response = await fetch(rainyDaysAPI + jacketId);
         if(!response.ok) {
             throw new Error("Jacket is not found");
         }
