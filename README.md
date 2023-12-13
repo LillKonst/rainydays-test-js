@@ -1,9 +1,3 @@
-# CA-Rainydays
-
-html and css for rainydays website
-
-About page is accessed through "Our story" under "About us" in the footer on desktop.
-
 # RAINYDAYS 
 
 ![image](https://github.com/LillKonst/rainydays-test-js/assets/126065743/d2f30e81-dcfc-4bf3-a379-9dc01a41b3fc)
@@ -16,15 +10,17 @@ The Rainydays website is a website made for showcasing and selling jackets. This
 The website includes a homepage, list of jackets, jacketspesific, about and contact page. 
 
 ## Build width
-HTML, CSS and JavaScript
+- HTML
+- CSS
+- JavaScript
 
 ## Getting started
 To get a closer look at this website you can 
-1. Clone my github repo:
-2. Open website with the Netlify app using this link:
+1. Clone my github repo: https://github.com/LillKonst/rainydays-test-js
+2. Open website with the Netlify app using this link: https://singular-caramel-e690d5.netlify.app/
 
 ## Contact 
 If you are interessted in more details or want to get in contact with me, you are welcome to sending me an email at konstlillkristine@gmail.com
 
-## Acknowledgment
+## Acknowledgments
 This website was my first ever project at Noroff University.
